@@ -95,13 +95,21 @@ SAMPLE RESPONSE
 }
 ```
 
+# AUTHORIZATIONS
+
+set authorization header for every request
+
+```
+Authorization: Bearer {{customToken}}
+```
+
 # Routes
 
 ## Properties
 
 ### Get All properties
 
-GET `{baseURL}/propertiesproperties`
+GET `{baseURL}/properties`
 
 SAMPLE RESPONSE
 
