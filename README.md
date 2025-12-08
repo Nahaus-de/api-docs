@@ -4,7 +4,7 @@
 
 Welcome to the **Nahaus.de API V2** documentation! This repository contains comprehensive guides and documentation to help you start working with Nahaus.de's API as quickly as possible and support you in effectively integrating your software.
 
-**Documentation URL:** [Interactive Swagger UI](https://europe-west3-pool-dev-nahaus-de.cloudfunctions.net/api2-v2/docs/v2/)
+**Documentation URL:** [Interactive Swagger UI](https://europe-west3-pool-dev-nahaus-de.cloudfunctions.net/api-v2/docs/v2/)
 
 **Base URL:** `https://europe-west3-pool-dev-nahaus-de.cloudfunctions.net`
 
@@ -64,27 +64,27 @@ Authorization: Bearer [YOUR_ACCESS_TOKEN]
 
 Manage your address book contacts.
 
-  * **GET** `/api2-v2/contacts`
+  * **GET** `/api-v2/contacts`
       * *Query Params:* `limit`
       * *Description:* Get all contacts.
-  * **GET** `/api2-v2/contacts/{contactID}`
+  * **GET** `/api-v2/contacts/{contactID}`
       * *Description:* Get details of a specific contact.
-  * **PUT** `/api2-v2/contacts/{contactID}`
+  * **PUT** `/api-v2/contacts/{contactID}`
       * *Body:* `Contact` object.
       * *Description:* Update a contact.
-  * **DELETE** `/api2-v2/contacts/{contactID}`
+  * **DELETE** `/api-v2/contacts/{contactID}`
       * *Description:* Delete a contact.
 
 ## 🏠 Landlords
 
 Manage property owners.
 
-  * **GET** `/api2-v2/landlords`
+  * **GET** `/api-v2/landlords`
       * *Description:* List all landlords.
-  * **POST** `/api2-v2/landlords`
+  * **POST** `/api-v2/landlords`
       * *Body:* `Landlord` object.
       * *Description:* Create a new landlord.
-  * **PUT** `/api2-v2/landlords/{landlordID}`
+  * **PUT** `/api-v2/landlords/{landlordID}`
       * *Body:* `Landlord` object.
       * *Description:* Update an existing landlord.
 
@@ -92,134 +92,134 @@ Manage property owners.
 
 Manage facility managers and agents.
 
-  * **GET** `/api2-v2/managers`
+  * **GET** `/api-v2/managers`
       * *Description:* List all managers.
-  * **POST** `/api2-v2/managers`
+  * **POST** `/api-v2/managers`
       * *Body:* `Manager` object.
       * *Description:* Create a new manager.
-  * **GET** `/api2-v2/managers/{managerID}`
+  * **GET** `/api-v2/managers/{managerID}`
       * *Description:* Get manager details.
-  * **PUT** `/api2-v2/managers/{managerID}`
+  * **PUT** `/api-v2/managers/{managerID}`
       * *Body:* `Manager` object.
       * *Description:* Update a manager.
-  * **DELETE** `/api2-v2/managers/{managerID}`
+  * **DELETE** `/api-v2/managers/{managerID}`
       * *Description:* Delete a manager.
 
 ## 📝 MSA (Mieterselbstauskunft)
 
 Manage tenancy applications.
 
-  * **GET** `/api2-v2/msa`
+  * **GET** `/api-v2/msa`
       * *Description:* List all applications.
-  * **POST** `/api2-v2/msa`
+  * **POST** `/api-v2/msa`
       * *Body:* `MSA` object.
       * *Description:* Create a new application manually.
-  * **GET** `/api2-v2/msa/{msaID}`
+  * **GET** `/api-v2/msa/{msaID}`
       * *Description:* Get application details.
-  * **PUT** `/api2-v2/msa/{msaID}`
+  * **PUT** `/api-v2/msa/{msaID}`
       * *Body:* `MSA` object.
       * *Description:* Update status or details.
-  * **DELETE** `/api2-v2/msa/{msaID}`
+  * **DELETE** `/api-v2/msa/{msaID}`
       * *Description:* Delete an application.
 
 ## 📋 Scrumboards
 
 Manage project boards, lists, and tasks.
 
-  * **GET** `/api2-v2/scrumboards`
+  * **GET** `/api-v2/scrumboards`
       * *Description:* List all boards.
-  * **POST** `/api2-v2/scrumboards`
+  * **POST** `/api-v2/scrumboards`
       * *Body:* `Scrumboard` object.
       * *Description:* Create a new board.
-  * **GET** `/api2-v2/scrumboards/{boardID}`
+  * **GET** `/api-v2/scrumboards/{boardID}`
       * *Description:* Get board details.
-  * **PUT** `/api2-v2/scrumboards/{boardID}`
+  * **PUT** `/api-v2/scrumboards/{boardID}`
       * *Body:* `Scrumboard` object.
       * *Description:* Update board settings.
 
 ### Scrumboard Cards
 
-  * **GET** `/api2-v2/scrumboards/{boardID}/cards`
+  * **GET** `/api-v2/scrumboards/{boardID}/cards`
       * *Description:* Get all cards for a specific board.
-  * **POST** `/api2-v2/scrumboards/{boardID}/cards`
+  * **POST** `/api-v2/scrumboards/{boardID}/cards`
       * *Body:* `ScrumboardCard` object.
       * *Description:* Create a new card.
-  * **PUT** `/api2-v2/scrumboards/{boardID}/cards/{cardID}`
+  * **PUT** `/api-v2/scrumboards/{boardID}/cards/{cardID}`
       * *Body:* `ScrumboardCard` object.
       * *Description:* Update a card.
-  * **DELETE** `/api2-v2/scrumboards/{boardID}/cards/{cardID}`
+  * **DELETE** `/api-v2/scrumboards/{boardID}/cards/{cardID}`
       * *Description:* Delete a card.
 
 ## 🔔 Reminders
 
 Manage time-based and recurring reminders.
 
-  * **GET** `/api2-v2/reminders`
-  * **POST** `/api2-v2/reminders` (Body: `NahausReminder`)
-  * **GET** `/api2-v2/reminders/{reminderID}`
-  * **PUT** `/api2-v2/reminders/{reminderID}` (Body: `NahausReminder`)
-  * **DELETE** `/api2-v2/reminders/{reminderID}`
+  * **GET** `/api-v2/reminders`
+  * **POST** `/api-v2/reminders` (Body: `NahausReminder`)
+  * **GET** `/api-v2/reminders/{reminderID}`
+  * **PUT** `/api-v2/reminders/{reminderID}` (Body: `NahausReminder`)
+  * **DELETE** `/api-v2/reminders/{reminderID}`
 
 ## 📅 Calendars
 
 Calendar management.
 
-  * **GET** `/api2-v2/calendars`
-  * **POST** `/api2-v2/calendars` (Body: `NahausCalendar`)
-  * **GET** `/api2-v2/calendars/{calendarID}`
-  * **PUT** `/api2-v2/calendars/{calendarID}` (Body: `NahausCalendar`)
-  * **DELETE** `/api2-v2/calendars/{calendarID}`
+  * **GET** `/api-v2/calendars`
+  * **POST** `/api-v2/calendars` (Body: `NahausCalendar`)
+  * **GET** `/api-v2/calendars/{calendarID}`
+  * **PUT** `/api-v2/calendars/{calendarID}` (Body: `NahausCalendar`)
+  * **DELETE** `/api-v2/calendars/{calendarID}`
 
 ## 💶 Expenses
 
 Financial expenses and invoices.
 
-  * **GET** `/api2-v2/expenses`
-  * **POST** `/api2-v2/expenses` (Body: `Expense`)
-  * **GET** `/api2-v2/expenses/{expenseID}`
-  * **PUT** `/api2-v2/expenses/{expenseID}` (Body: `Expense`)
-  * **DELETE** `/api2-v2/expenses/{expenseID}`
+  * **GET** `/api-v2/expenses`
+  * **POST** `/api-v2/expenses` (Body: `Expense`)
+  * **GET** `/api-v2/expenses/{expenseID}`
+  * **PUT** `/api-v2/expenses/{expenseID}` (Body: `Expense`)
+  * **DELETE** `/api-v2/expenses/{expenseID}`
 
 ## 🏢 Properties & Units
 
 Manage Real Estate structure.
 
-  * **GET** `/api2-v2/properties`
+  * **GET** `/api-v2/properties`
       * *Description:* Get all real estate properties.
-  * **POST** `/api2-v2/properties`
+  * **POST** `/api-v2/properties`
       * *Description:* Create a property.
-  * **GET** `/api2-v2/properties/{propertyID}`
-  * **PUT** `/api2-v2/properties/{propertyID}`
-  * **DELETE** `/api2-v2/properties/{propertyID}`
-  * **GET** `/api2-v2/properties/{propertyID}/units`
+  * **GET** `/api-v2/properties/{propertyID}`
+  * **PUT** `/api-v2/properties/{propertyID}`
+  * **DELETE** `/api-v2/properties/{propertyID}`
+  * **GET** `/api-v2/properties/{propertyID}/units`
       * *Description:* Get all units belonging to a specific property.
-  * **POST** `/api2-v2/properties/{propertyID}/units`
-  * **GET** `/api2-v2/properties/{propertyID}/units/{unitID}`
-  * **PUT** `/api2-v2/properties/{propertyID}/units/{unitID}`
-  * **DELETE** `/api2-v2/properties/{propertyID}/units/{unitID}`
+  * **POST** `/api-v2/properties/{propertyID}/units`
+  * **GET** `/api-v2/properties/{propertyID}/units/{unitID}`
+  * **PUT** `/api-v2/properties/{propertyID}/units/{unitID}`
+  * **DELETE** `/api-v2/properties/{propertyID}/units/{unitID}`
 
 ## 👥 Tenants & Periods
 
 Manage rental periods and tenancies.
 
-  * **GET** `/api2-v2/periods/filtered/ended`
+  * **GET** `/api-v2/periods/filtered/ended`
       * *Description:* Get rental periods that have ended.
-  * **POST** `/api2-v2/properties/{propID}/units/{unitID}/periods`
+  * **POST** `/api-v2/properties/{propID}/units/{unitID}/periods`
       * *Description:* Create a new rental period.
-  * **GET** `/api2-v2/properties/{propID}/units/{unitID}/periods/{periodID}`
+  * **GET** `/api-v2/properties/{propID}/units/{unitID}/periods/{periodID}`
       * *Description:* Get details of a specific rental period/tenant.
-  * **POST** `/api2-v2/properties/{propID}/units/{unitID}/periods/{periodID}`
+  * **POST** `/api-v2/properties/{propID}/units/{unitID}/periods/{periodID}`
       * *Description:* Create a tenant within an existing period.
 
 ## 🔑 Managements
 
 Manage property management contracts.
 
-  * **GET** `/api2-v2/properties/{propID}/units/{unitID}/managements`
-  * **POST** `/api2-v2/properties/{propID}/units/{unitID}/managements`
-  * **GET** `/api2-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
-  * **PUT** `/api2-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
-  * **DELETE** `/api2-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
+  * **GET** `/api-v2/properties/{propID}/units/{unitID}/managements`
+  * **POST** `/api-v2/properties/{propID}/units/{unitID}/managements`
+  * **GET** `/api-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
+  * **PUT** `/api-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
+  * **DELETE** `/api-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
 
 ## ⏲️ Meters & Readings
 
@@ -227,24 +227,24 @@ Manage utility meters (Water, Electricity, Gas, etc.).
 
 ### Property Meters
 
-  * **GET** `/api2-v2/properties/{propertyID}/meters`
-  * **POST** `/api2-v2/properties/{propertyID}/meters` (Body: `Meter`)
-  * **PUT** `/api2-v2/properties/{propertyID}/meters/{meterID}` (Body: `Meter`)
-  * **DELETE** `/api2-v2/properties/{propertyID}/meters/{meterID}`
+  * **GET** `/api-v2/properties/{propertyID}/meters`
+  * **POST** `/api-v2/properties/{propertyID}/meters` (Body: `Meter`)
+  * **PUT** `/api-v2/properties/{propertyID}/meters/{meterID}` (Body: `Meter`)
+  * **DELETE** `/api-v2/properties/{propertyID}/meters/{meterID}`
 
 ### Unit Meters
 
-  * **GET** `/api2-v2/properties/{propertyID}/units/{unitID}/meters`
-  * **POST** `/api2-v2/properties/{propertyID}/units/{unitID}/meters` (Body: `Meter`)
-  * **PUT** `/api2-v2/properties/{propertyID}/units/{unitID}/meters/{meterID}` (Body: `Meter`)
-  * **DELETE** `/api2-v2/properties/{propertyID}/units/{unitID}/meters/{meterID}`
+  * **GET** `/api-v2/properties/{propertyID}/units/{unitID}/meters`
+  * **POST** `/api-v2/properties/{propertyID}/units/{unitID}/meters` (Body: `Meter`)
+  * **PUT** `/api-v2/properties/{propertyID}/units/{unitID}/meters/{meterID}` (Body: `Meter`)
+  * **DELETE** `/api-v2/properties/{propertyID}/units/{unitID}/meters/{meterID}`
 
 ### Meter Readings
 
-  * **POST** `/api2-v2/properties/{propertyID}/meters/{meterID}/readings`
+  * **POST** `/api-v2/properties/{propertyID}/meters/{meterID}/readings`
       * *Body:* `MeterReading`
       * *Description:* Add a reading to a Property Meter.
-  * **POST** `/api2-v2/properties/{propertyID}/units/{unitID}/meters/{meterID}/readings`
+  * **POST** `/api-v2/properties/{propertyID}/units/{unitID}/meters/{meterID}/readings`
       * *Body:* `MeterReading`
       * *Description:* Add a reading to a Unit Meter.
 
@@ -252,18 +252,18 @@ Manage utility meters (Water, Electricity, Gas, etc.).
 
 File and Folder management.
 
-  * **GET** `/api2-v2/files`
+  * **GET** `/api-v2/files`
       * *Query Params:* `parentId` (ID of folder), `limit`.
       * *Description:* List files and folders.
-  * **POST** `/api2-v2/files`
+  * **POST** `/api-v2/files`
       * *Body:* `FileMetadata`
       * *Description:* Create a folder or upload file metadata.
-  * **GET** `/api2-v2/files/{fileID}`
+  * **GET** `/api-v2/files/{fileID}`
       * *Description:* Get file details.
-  * **PUT** `/api2-v2/files/{fileID}`
+  * **PUT** `/api-v2/files/{fileID}`
       * *Body:* `FileMetadata`
       * *Description:* Rename, move, or update a file.
-  * **DELETE** `/api2-v2/files/{fileID}`
+  * **DELETE** `/api-v2/files/{fileID}`
       * *Description:* Delete a file or folder.
 
 -----
