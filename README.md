@@ -31,8 +31,7 @@ The V2 API uses **Bearer Token** authentication. You must first exchange your cr
 ```json
 {
   "email": "your@email.com",
-  "password": "your_password",
-  "returnSecureToken": true
+  "password": "your_password"
 }
 ````
 
