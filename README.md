@@ -14,7 +14,7 @@ Welcome to the **Nahaus.de API V2** documentation! This repository contains comp
 
 Die **nahaus API V2** ermöglicht es Entwicklern, auf die Funktionalitäten unserer Immobilienmanagement-Software zuzugreifen und diese in ihre eigenen Anwendungen zu integrieren. 
 
-Sie können die API verwenden, um nicht nur Immobilien und Einheiten zu verwalten, sondern auch Kontakte, Finanzen (Ausgaben), Scrumboards, Kalender, Erinnerungen und Zählerstände zu integrieren. Mit unserer RESTful API können Sie HTTP-Anfragen senden, um Daten zu lesen, zu erstellen, zu aktualisieren und zu löschen.
+Sie können die API verwenden, um nicht nur Immobilien und Einheiten zu verwalten, sondern auch Kontakte, Finanzen (Ausgaben), Scrumboards, Kalender, Erinnerungen, Dokumente und Zählerstände zu integrieren. Mit unserer RESTful API können Sie HTTP-Anfragen senden, um Daten zu lesen, zu erstellen, zu aktualisieren und zu löschen.
 
 ---
 
@@ -65,7 +65,7 @@ Authorization: Bearer [YOUR_ACCESS_TOKEN]
 Manage your address book contacts.
 
   * **GET** `/api2-v2/contacts`
-      * *Query Params:* `limit` 
+      * *Query Params:* `limit`
       * *Description:* Get all contacts.
   * **GET** `/api2-v2/contacts/{contactID}`
       * *Description:* Get details of a specific contact.
@@ -104,6 +104,23 @@ Manage facility managers and agents.
       * *Description:* Update a manager.
   * **DELETE** `/api2-v2/managers/{managerID}`
       * *Description:* Delete a manager.
+
+## 📝 MSA (Mieterselbstauskunft)
+
+Manage tenancy applications.
+
+  * **GET** `/api2-v2/msa`
+      * *Description:* List all applications.
+  * **POST** `/api2-v2/msa`
+      * *Body:* `MSA` object.
+      * *Description:* Create a new application manually.
+  * **GET** `/api2-v2/msa/{msaID}`
+      * *Description:* Get application details.
+  * **PUT** `/api2-v2/msa/{msaID}`
+      * *Body:* `MSA` object.
+      * *Description:* Update status or details.
+  * **DELETE** `/api2-v2/msa/{msaID}`
+      * *Description:* Delete an application.
 
 ## 📋 Scrumboards
 
@@ -163,24 +180,48 @@ Financial expenses and invoices.
   * **PUT** `/api2-v2/expenses/{expenseID}` (Body: `Expense`)
   * **DELETE** `/api2-v2/expenses/{expenseID}`
 
-## 🏢 Properties
+## 🏢 Properties & Units
+
+Manage Real Estate structure.
 
   * **GET** `/api2-v2/properties`
       * *Description:* Get all real estate properties.
-
-## 🚪 Units
-
+  * **POST** `/api2-v2/properties`
+      * *Description:* Create a property.
+  * **GET** `/api2-v2/properties/{propertyID}`
+  * **PUT** `/api2-v2/properties/{propertyID}`
+  * **DELETE** `/api2-v2/properties/{propertyID}`
   * **GET** `/api2-v2/properties/{propertyID}/units`
       * *Description:* Get all units belonging to a specific property.
+  * **POST** `/api2-v2/properties/{propertyID}/units`
+  * **GET** `/api2-v2/properties/{propertyID}/units/{unitID}`
+  * **PUT** `/api2-v2/properties/{propertyID}/units/{unitID}`
+  * **DELETE** `/api2-v2/properties/{propertyID}/units/{unitID}`
 
 ## 👥 Tenants & Periods
 
+Manage rental periods and tenancies.
+
   * **GET** `/api2-v2/periods/filtered/ended`
       * *Description:* Get rental periods that have ended.
+  * **POST** `/api2-v2/properties/{propID}/units/{unitID}/periods`
+      * *Description:* Create a new rental period.
   * **GET** `/api2-v2/properties/{propID}/units/{unitID}/periods/{periodID}`
       * *Description:* Get details of a specific rental period/tenant.
+  * **POST** `/api2-v2/properties/{propID}/units/{unitID}/periods/{periodID}`
+      * *Description:* Create a tenant within an existing period.
 
-## ⏲️ Meters
+## 🔑 Managements
+
+Manage property management contracts.
+
+  * **GET** `/api2-v2/properties/{propID}/units/{unitID}/managements`
+  * **POST** `/api2-v2/properties/{propID}/units/{unitID}/managements`
+  * **GET** `/api2-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
+  * **PUT** `/api2-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
+  * **DELETE** `/api2-v2/properties/{propID}/units/{unitID}/managements/{mgmtID}`
+
+## ⏲️ Meters & Readings
 
 Manage utility meters (Water, Electricity, Gas, etc.).
 
@@ -300,6 +341,18 @@ File and Folder management.
   "unitID": "{optional_unit_id}",
   "dueDate": "2023-12-01T17:00:00Z",
   "priority": "NORMAL" // Options: LOW, NORMAL, HIGH
+}
+```
+
+### FileMetadata
+
+```json
+{
+    "name": "Contract.pdf",
+    "isFolder": false,
+    "parentId": "folder_id_or_null",
+    "mimeType": "application/pdf",
+    "size": 1024
 }
 ```
 
