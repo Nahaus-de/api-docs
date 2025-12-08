@@ -63,7 +63,7 @@ Authorization: Bearer [YOUR_ACCESS_TOKEN]
 
 Manage your address book contacts.
 
-  * **GET** `/api2-v2/contacts`
+  * **GET** `/api-v2/contacts`
       * *Query Params:* `limit`
       * *Description:* Get all contacts.
   * **GET** `/api2-v2/contacts/{contactID}`
