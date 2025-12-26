@@ -558,5 +558,3 @@ Built by and for developers :heart: we will help you :punch:
 Copyright (c) 2023-2025 [Nahaus.de](https://github.com/Nahaus-de). Licensed under the MIT License (MIT)
 
 ```
-
-```
