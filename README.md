@@ -6,9 +6,9 @@
 
 Welcome to the **Nahaus.de API V2** documentation! This repository contains comprehensive guides and documentation to help you start working with Nahaus.de's API as quickly as possible and support you in effectively integrating your software.
 
-**Documentation URL:** [Interactive Swagger UI](https://europe-west3-pool-dev-nahaus-de.cloudfunctions.net/api-v2/docs/v2/)
+**Documentation URL:** [Interactive Swagger UI](https://europe-west3-pool-nahaus-de.cloudfunctions.net/api-v2/docs/v2/)
 
-**Base URL:** `https://europe-west3-pool-dev-nahaus-de.cloudfunctions.net`
+**Base URL:** `https://europe-west3-pool-nahaus-de.cloudfunctions.net`
 
 **Please Note:** To access and use the Nahaus.de API, you must possess an ENTERPRISE ACCOUNT with Nahaus.de.
 
@@ -28,7 +28,7 @@ The V2 API uses **Bearer Token** authentication. You must first exchange your cr
 
 **POST** `/api-auth/login`
 
-> **Note:** This endpoint specifically uses the Auth Service URL: `https://europe-west3-pool-dev-nahaus-de.cloudfunctions.net`
+> **Note:** This endpoint specifically uses the Auth Service URL: `https://europe-west3-pool-nahaus-de.cloudfunctions.net`
 
 **Request Body:**
 
