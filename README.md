@@ -8,7 +8,7 @@ Welcome to the **Nahaus.de API V2** documentation! This repository contains comp
 
 **Documentation URL:** [Interactive Swagger UI](https://europe-west3-pool-nahaus-de.cloudfunctions.net/api-v2/docs/v2/)
 
-**Base URL:** `https://europe-west3-pool-nahaus-de.cloudfunctions.net`
+**Base URL:** `https://europe-west3-pool-nahaus-de.cloudfunctions.net` 
 
 **Please Note:** To access and use the Nahaus.de API, you must possess an ENTERPRISE ACCOUNT with Nahaus.de.
 
